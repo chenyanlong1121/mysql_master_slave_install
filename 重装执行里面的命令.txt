@@ -1,0 +1,9 @@
+systemctl stop mysql
+rm -rf /home/mysql-data/  #mysql的数据目录
+rm -rf /usr/local/mysql-8.0.20/
+rm -rf /etc/my.cnf
+rm -rf  /etc/init.d/mysql
+rm -rf /usr/bin/mysql
+rm -rf /etc/rc.d/init.d/mysql
+systemctl daemon-reload
+ss -anltp|grep 3306
